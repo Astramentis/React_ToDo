@@ -7,4 +7,4 @@ class ToDoList extends React.Component{
 
 }
 
-export default App;
+export default ToDoList;
