@@ -12,7 +12,16 @@ class App extends React.Component{
       <ToDoItem></ToDoItem>
       </div>
       );
-  }
+    }
+
+    componentDidMount = () => {
+      const todos = localStorage.getItem('todos');
+      if(todos){
+        console.log('Has todos', todos);
+      } else {
+        console.log('');
+      }
+    }
 
 }
 
