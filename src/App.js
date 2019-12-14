@@ -5,6 +5,13 @@ import ToDoItem from './ToDoItem/ToDoItem';
 
 class App extends React.Component{
 
+  constructor(){
+    super();
+    this.state = {
+      todos: []
+    };
+  }
+
   render(){
     return(
       <div>
