@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import ToDoList from './ToDoList/ToDoList';
 import ToDoItem from './ToDoItem/ToDoItem';
+import AddTodo from './AddTodo/AddTodo';
 
 class App extends React.Component{
 
@@ -17,6 +18,7 @@ class App extends React.Component{
       <div>
       <ToDoList></ToDoList>
       <ToDoItem></ToDoItem>
+      <AddTodo></AddTodo>
       </div>
       );
     }
