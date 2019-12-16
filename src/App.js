@@ -16,9 +16,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
-      <ToDoList></ToDoList>
-      <ToDoItem></ToDoItem>
-      <AddTodo></AddTodo>
+      <AddTodo addTodoFn={this.addTodo}></AddTodo>
       </div>
       );
     }
@@ -32,6 +30,11 @@ class App extends React.Component{
       }
     }
 
+    addTodo = async (todo) => {
+      await this.setState({todos: [...this.state.todos,todo]});
+      localStorage.setItem('todos',JSON.stringify(this.state.todos));
+      console.log('saved');
+  }
 }
 
 export default App;

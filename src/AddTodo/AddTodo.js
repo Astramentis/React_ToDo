@@ -23,7 +23,7 @@ class AddTodo extends React.Component{
     }
     submitTodo = (e) => {
         e.preventDefault();
-        console.log('submit',this.state);
+        this.props.addTodoFn(this.state.todo);
     }
 
 }
