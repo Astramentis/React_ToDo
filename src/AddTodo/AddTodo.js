@@ -4,7 +4,7 @@ class AddTodo extends React.Component{
 
     constructor(){
         super();
-        this.setState = {
+        this.state = {
             todo:''
         };
     }
@@ -19,11 +19,11 @@ class AddTodo extends React.Component{
         </div>)
     }
     updateInput = (e) => {
-        console.log(e);
+        this.setState({ todo: e.target.value });
     }
     submitTodo = (e) => {
         e.preventDefault();
-        console.log('submit');
+        console.log('submit',this.state);
     }
 
 }
