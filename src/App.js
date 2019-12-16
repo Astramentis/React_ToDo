@@ -17,6 +17,7 @@ class App extends React.Component{
     return(
       <div>
       <AddTodo addTodoFn={this.addTodo}></AddTodo>
+      <ToDoList todos={this.state.todos}></ToDoList>
       </div>
       );
     }
