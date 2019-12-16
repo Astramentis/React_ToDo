@@ -1,6 +1,14 @@
 import React from 'react';
 
 class AddTodo extends React.Component{
+
+    constructor(){
+        super();
+        this.setState = {
+            todo:''
+        };
+    }
+
     render (){
         return(
         <div className = 'AddTodoContainer'>
