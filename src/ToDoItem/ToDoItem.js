@@ -2,7 +2,14 @@ import React from 'react';
 
 class ToDoItem extends React.Component{
     render (){
-        return(<div>todo item component</div>)
+        const { todo } = this.props;    
+    
+        return (
+            <div onClick={this.toggleTodo}>{todo.text}</div>
+        );
+    }
+    toggleTodo = () => {
+        this.props.updateTodoFn(this.props.todo);
     }
 
 }
