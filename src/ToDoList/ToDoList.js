@@ -17,8 +17,9 @@ class ToDoList extends React.Component{
            </div>
        );
     }
+
     updateTodo = (todo) => {
-        this.props.updateTodoFn(todo);
+        this.props.updateTodoFn (todo);
     }
 
 }

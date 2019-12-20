@@ -16,7 +16,7 @@ class App extends React.Component{
     return(
       <div>
       <AddTodo addTodoFn={this.addTodo}></AddTodo>
-      <ToDoList todos={this.state.todos}></ToDoList>
+      <ToDoList todos={this.state.todos} todos={this.state.todos}></ToDoList>
       </div>
       );
     }
@@ -24,9 +24,10 @@ class App extends React.Component{
     componentDidMount = () => {
       const todos = localStorage.getItem('todos');
       if(todos){
-        console.log('Has todos', todos);
+        const savedTodos = JSON.parse(todos);
+        this.setState({ todos : savedTodos });
       } else {
-        console.log('');
+        console.log('No todos');
       }
     }
 
@@ -36,7 +37,7 @@ class App extends React.Component{
         completed: false
       }] });
       localStorage.setItem('todos',JSON.stringify(this.state.todos));
-      console.log('saved');
+      console.log(localStorage.getItem('todos'));
   }
     updateTodo = (todo) =>{
       const newTodos = this.state.todos.map(_todo => {
@@ -49,6 +50,7 @@ class App extends React.Component{
             return _todo
       });
       this.setState({todos: newTodos});
+      console.log(newTodos);
     }
 }
 
