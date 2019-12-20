@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 
+
 class ToDoItem extends React.Component{
     render (){
         const { todo } = this.props;    
@@ -10,7 +11,7 @@ class ToDoItem extends React.Component{
         );
     }
     toggleTodo = () => {
-        this.props.updateTodoFn(this.props.todo);
+        this.props.updateTodoFn (this.props.todo);
     }
 
 }

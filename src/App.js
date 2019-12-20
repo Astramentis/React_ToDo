@@ -50,7 +50,7 @@ class App extends React.Component{
             return _todo
       });
       this.setState({todos: newTodos});
-      console.log(newTodos);
+      localStorage.setItem('todos', JSON.stringify(this.state.todos));
     }
 }
 
